@@ -34,16 +34,19 @@ class Usuario extends Model {
 
 ## INCLUSÕES POR NIKOLAS // ANTES DE UPAR NO GIT
 
-AULAS DO BONIEKY
+Aulas do Bonieky
 
--DETECTANDO LOGIN (1/2)
--DETECTANDO LOGIN (2/2)
+-Detectando Login (1/2)
 
--PÁGINA DE LOGIN (1/2)
--PÁGINA DE LOGIN (2/2)
+-Detectando Login (2/2)
 
--PÁGINA DE CADASTRO (1/2)
--PÁGINA DE CADASTRO(2/2)
+-Página de Login (1/2)
+
+-Página de Login (2/2)
+
+-Página de Cadastro (1/2)
+
+-Página de Cadastro (2/2)
 
 
 ## INCLUSÕES POR NIKOLAS // DEPOIS DE UPAR NO GIT
