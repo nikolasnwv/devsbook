@@ -31,8 +31,7 @@ class Usuario extends Model {
 
 }
 ```
-
-## Aulas do Bonieky
+## #
 
 ## Inclusões por Níkolas // ANTES DE UPAR NO GIT
 
