@@ -58,6 +58,6 @@ class Usuario extends Model {
 - Página Home (2/2)
 
 - Corrigindo dois Bugs -> final do vanilla.js - remover linha // var modal = new VanillaModal();
-é a última linha do script...
+é a última linha do script... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
 
 - Separar FEED Item e FEED Editor.
