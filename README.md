@@ -57,11 +57,16 @@ class Usuario extends Model {
 18/07/2020
 - Página Home (2/2)
 
-- Corrigindo dois Bugs -> final do vanilla.js - remover linha // var modal = new VanillaModal();
-é a última linha do script... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
+- Corrigindo dois Bugs: 
+    -ir até o final do vanilla.js e remover linha // var modal = new VanillaModal();
+    é a última linha do arquivo... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
 
 - Separar FEED Item e FEED Editor.
 
 - Feed Editor (1/2)
 
-    Teve um comentario arrumou o erro de sessão em outro navegador e/ou janela anonima
+    Teve um comentario de OUTRO ALUNO que arrumou o erro de sessão em outro navegador e/ou janela anonima (count 0 foi pra 1)
+
+- Feed Editor (2/2)
+    Eu alterei algumas variaveis e nome de arquivo pra uma forma mais didática(pelo menos pra mim).
+    Isso não foi nada demais, uma rápida lida no código você ve que não foi quase nada...

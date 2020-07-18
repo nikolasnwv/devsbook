@@ -6,7 +6,7 @@ feedSubmit.addEventListener('click', function(obj) {
     let value = feedInput.innerText;
     
     if (value != '') {
-        feedForm.querySelector('input[name=feededitorsend]').value = value;
+        feedForm.querySelector('input[name=feededitortextsend]').value = value;
         feedForm.submit();
     }
 });

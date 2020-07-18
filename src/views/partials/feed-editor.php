@@ -10,7 +10,7 @@
             <div class="feed-new-send"><img src="<?=$base;?>/assets/images/send.png" /></div>
 
             <form class="feed-new-form" method="POST" action="<?=$base;?>/post/new">
-                <input type="hidden" name="feededitorsend"/>
+                <input type="hidden" name="feededitortextsend"/>
             </form>
         </div>
     </div>
