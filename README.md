@@ -31,7 +31,7 @@ class Usuario extends Model {
 
 }
 ```
-## #
+## Abaixo Inclusões Realizadas no MVC - na aula do CURSO DE PHP 7+ // do Bonieky
 
 ## Inclusões por Níkolas // ANTES DE UPAR NO GIT
 
@@ -56,3 +56,8 @@ class Usuario extends Model {
 
 18/07/2020
 - Página Home (2/2)
+
+- Corrigindo dois Bugs -> final do vanilla.js - remover linha // var modal = new VanillaModal();
+é a última linha do script...
+
+- Separar FEED Item e FEED Editor.
