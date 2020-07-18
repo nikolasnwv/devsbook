@@ -6,7 +6,9 @@ use \src\models\Post;
 class PostHandler {
 
     public static function addPost($idUser, $type, $body){
-        if(!empty($idUser)) {
+        $body = trim($body);
+
+        if(!empty($idUser) && !empty($body)) {
 
             Post::insert([
                 'id_user' => $idUser,
@@ -16,5 +18,4 @@ class PostHandler {
             ])->execute();
         }
     }
-
 }
