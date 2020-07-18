@@ -3,7 +3,7 @@
                 <a href="">
                     <div class="menu-item active">
                         <div class="menu-item-icon">
-                            <img src="assets/images/home-run.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/home-run.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Home
@@ -13,7 +13,7 @@
                 <a href="">
                     <div class="menu-item">
                         <div class="menu-item-icon">
-                            <img src="assets/images/user.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/user.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Meu Perfil
@@ -23,7 +23,7 @@
                 <a href="">
                     <div class="menu-item">
                         <div class="menu-item-icon">
-                            <img src="assets/images/friends.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/friends.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Amigos
@@ -36,7 +36,7 @@
                 <a href="">
                     <div class="menu-item">
                         <div class="menu-item-icon">
-                            <img src="assets/images/photo.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/photo.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Fotos
@@ -47,7 +47,7 @@
                 <a href="">
                     <div class="menu-item">
                         <div class="menu-item-icon">
-                            <img src="assets/images/settings.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/settings.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Configurações
@@ -57,7 +57,7 @@
                 <a href="">
                     <div class="menu-item">
                         <div class="menu-item-icon">
-                            <img src="assets/images/power.png" width="16" height="16" />
+                            <img src="<?=$base;?>/assets/images/power.png" width="16" height="16" />
                         </div>
                         <div class="menu-item-text">
                             Sair

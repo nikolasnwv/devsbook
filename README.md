@@ -54,3 +54,6 @@ class Usuario extends Model {
 
 16/07/2020
 - Página Home (1/2)
+
+18/07/2020
+- Página Home (2/2)
