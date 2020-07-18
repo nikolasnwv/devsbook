@@ -5,7 +5,7 @@
                 <a href=""><img src="<?=$base;?>/media/avatars/avatar.jpg" /></a>
             </div>
             <div class="feed-item-head-info">
-                <a href=""><span class="fidi-name"><?=$loggedUser->name;?></span></a>
+                <a href=""><span class="fidi-name"><?=$user->name;?></span></a>
                     <span class="fidi-action">fez um post</span>
                 <br/>
                     <span class="fidi-date">07/03/2020</span>

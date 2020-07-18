@@ -9,7 +9,7 @@ class LoginHandler {
             $token = $_SESSION['token'];
 
             $data = User::select()->where('token', $token)->one(); // one pode ser ->execute
-            if(count($data) > 0){
+            if(count($data) > 1){ //originalmente era 0 - porém da bug quando loga em janela anonima, com 1 funciona corretamente
                 
                 $loggedUser = new User();
                 $loggedUser->id = $data['id'];

@@ -61,3 +61,7 @@ class Usuario extends Model {
 é a última linha do script... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
 
 - Separar FEED Item e FEED Editor.
+
+- Feed Editor (1/2)
+
+    Teve um comentario arrumou o erro de sessão em outro navegador e/ou janela anonima
