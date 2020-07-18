@@ -32,21 +32,25 @@ class Usuario extends Model {
 }
 ```
 
-## INCLUSÕES POR NIKOLAS // ANTES DE UPAR NO GIT
+## Aulas do Bonieky
 
-Aulas do Bonieky
+## Inclusões por Níkolas // ANTES DE UPAR NO GIT
 
--Detectando Login (1/2)
+13/07/2020
+- Detectando Login (1/2)
 
--Detectando Login (2/2)
+- Detectando Login (2/2)
 
--Página de Login (1/2)
+- Página de Login (1/2)
 
--Página de Login (2/2)
+- Página de Login (2/2)
 
--Página de Cadastro (1/2)
+15/07/2020
+- Página de Cadastro (1/2)
 
--Página de Cadastro (2/2)
+- Página de Cadastro (2/2)
 
+## Inclusões por Níkolas // DEPOIS DE UPAR NO GIT
 
-## INCLUSÕES POR NIKOLAS // DEPOIS DE UPAR NO GIT
+16/07/2020
+- Página Home (1/2)
