@@ -31,7 +31,7 @@ class Usuario extends Model {
 
 }
 ```
-## Abaixo Inclusões Realizadas no MVC - na aula do CURSO DE PHP 7+ // do Bonieky
+## Abaixo Inclusões Realizadas no MVC, das aulas do CURSO DE PHP 7+ do Bonieky
 
 ## Inclusões por Níkolas // ANTES DE UPAR NO GIT
 
@@ -58,15 +58,25 @@ class Usuario extends Model {
 - Página Home (2/2)
 
 - Corrigindo dois Bugs: 
-    -ir até o final do vanilla.js e remover linha // var modal = new VanillaModal();
-    é a última linha do arquivo... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
+    - ir até o final do vanilla.js e remover linha // var modal = new VanillaModal();
+
+    - é a última linha do arquivo... (o outro BUG era no MVC), como eu baixei a estrutura atualizada, não precisei mexer.
 
 - Separar FEED Item e FEED Editor.
 
 - Feed Editor (1/2)
-
-    Teve um comentario de OUTRO ALUNO que arrumou o erro de sessão em outro navegador e/ou janela anonima (count 0 foi pra 1)
+    - Teve um comentario de OUTRO ALUNO que arrumou o erro de sessão em outro navegador e/ou janela anonima (count 0 foi pra 1)
 
 - Feed Editor (2/2)
-    Eu alterei algumas variaveis e nome de arquivo pra uma forma mais didática(pelo menos pra mim).
-    Isso não foi nada demais, uma rápida lida no código você ve que não foi quase nada...
+    - Eu alterei algumas variaveis e nome de arquivo pra uma forma mais didática(pelo menos pra mim).
+    
+    - Isso não foi nada demais, uma rápida lida no código você ve que não foi quase nada...
+
+20/07/2020
+- Feed (parte 1)
+
+- Feed (parte 2)
+
+- Feed (parte 3)
+
+- Feed (parte 4)
