@@ -3,13 +3,13 @@ namespace src\handlers;
 
 use \src\models\User;
 
-class LoginHandler {
+class UserHandler {
     public static function checkLogin() {
         if(!empty($_SESSION['token'])) {
             $token = $_SESSION['token'];
 
             $data = User::select()->where('token', $token)->one(); // one pode ser ->execute
-            if(count($data) > 1){ //originalmente era 0 - porém da bug quando loga em janela anonima, com 1 funciona corretamente
+            if(count($data) > 1) { //originalmente era 0 - porém da bug quando loga em janela anonima, com 1 funciona corretamente
                 
                 $loggedUser = new User();
                 $loggedUser->id = $data['id'];
@@ -23,7 +23,7 @@ class LoginHandler {
         return false;       
     }
 
-    public static function verifyLogin ($email, $password) {
+    public static function verifyLogin($email, $password) {
         $user = User::select()->where('email', $email)->one();
 
         if($user) {
@@ -41,9 +41,33 @@ class LoginHandler {
         return false;
     }   
 
-    public function emailExists ($email) {
+    public function idExists($id) {
+        $user = User::select()->where('id', $id)->one();
+        return $user ? true : false;
+    }
+
+    public function emailExists($email) {
         $user = User::select()->where('email', $email)->one();
         return $user ? true : false;
+    }
+
+    public function getUser($id) {
+        $data = User::select()->where('id', $id)->one();
+        
+        if($data) {
+            $user = new User();
+            $user->id = $data['id'];
+            $user->name = $data['name'];
+            $user->birthdate = $data['birthdate'];
+            $user->city = $data['city'];
+            $user->work = $data['work'];
+            $user->avatar = $data['avatar'];
+            $user->cover = $data['cover'];
+       
+            return $user;
+        }
+
+        return false;
     }
 
     public function addUser($name, $email, $password, $birthdate){
