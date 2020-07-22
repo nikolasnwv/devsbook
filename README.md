@@ -48,7 +48,32 @@ class Usuario extends Model {
 - Página de Cadastro (1/2)
 
 - Página de Cadastro (2/2)
-
+    - Ao invés de criar um iMask, eu fiz no JAVASCRIPT puro a máscara da data...
+    ```javascript
+    <script>
+    document.getElementById("birthdate").addEventListener("input", function() {
+    
+        var i = document.getElementById("birthdate").value.length;
+        var str = document.getElementById("birthdate").value;
+    
+        if (isNaN(Number(str.charAt(i-1)))) {
+            document.getElementById("birthdate").value = str.substr(0, i-1)
+        }
+    
+    });
+    
+    document.addEventListener('keydown', function(event) { //pega o evento de precionar uma tecla 
+    
+        if(event.keyCode != 46 && event.keyCode != 8){ //verifica se a tecla precionada nao e um backspace e delete
+            var i = document.getElementById("birthdate").value.length; //aqui pega o tamanho do input
+            if (i === 2 || i === 5) document.getElementById("birthdate").value = document.getElementById("birthdate").value + "/";
+                //aqui faz a divisoes colocando um ponto no terceiro e sexto indice 
+        }
+        
+    });
+    </script>
+    ```
+    
 ## Inclusões por Níkolas // DEPOIS DE UPAR NO GIT
 
 16/07/2020
