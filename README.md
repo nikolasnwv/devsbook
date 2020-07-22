@@ -80,3 +80,14 @@ class Usuario extends Model {
 - Feed (parte 3)
 
 - Feed (parte 4)
+
+22/07/2020
+- Perfil (parte 1) - Rota
+
+- Perfil (parte 2) - Menu
+
+- Perfil (parte 3) - Conteúdo Base
+
+- Perfil (parte 4) - Contéudo Específico
+
+- Perfil (parte 5) - Contéudo Específico

@@ -24,13 +24,13 @@ class LoginController extends Controller {
         if($name && $email && $password && $birthdate) {
             $birthdate = explode('/', $birthdate);
             if(count($birthdate) != 3) {
-                $_SESSION['flash'] = 'mando tudo';
+                $_SESSION['flash'] = 'Error! Try again.';
                 $this->redirect('/register');
             }
 
             $birthdate = $birthdate[2].'-'.$birthdate[1].'-'.$birthdate[0];
             if(strtotime($birthdate) === false) {
-                $_SESSION['flash'] = 'Separo errado';
+                $_SESSION['flash'] = 'Formato inválido. Use somente números!';
                 $this->redirect('/register');
             }
 
@@ -44,6 +44,7 @@ class LoginController extends Controller {
             }
 
         } else {
+            $_SESSION['flash'] = 'Preencha todos os campos!';
             $this->redirect('/register');
         }
     }

@@ -22,7 +22,7 @@
 
             <div class="input input-date">Sua data de nascimento:</div>
 
-            <input placeholder="Digite sua Data de Nascimento" class="input" type="text" name="birthdate"/>
+            <input id="birthdate" inputmode="numeric" placeholder="Ex.: 01/03/1993" class="input" type="text" name="birthdate" minlength="10" maxlength="10"/>
 
             <input class="button" type="submit" value="Finalizar" />
 
@@ -35,16 +35,27 @@
             Já tem cadastro? <a href="<?=$base;?>/login">Faça o log-in.</a>
         </form>
     </section>
-    <!--
-    <script src="https://unpkg.com/imask/"></script>
-    <script>
-        var element = document.getElementById('birthdate');
-        var maskOptions = {
-            mask:'00/00/0000'
-        };
+<script>
+    document.getElementById("birthdate").addEventListener("input", function() {
+    
+        var i = document.getElementById("birthdate").value.length;
+        var str = document.getElementById("birthdate").value;
+    
+        if (isNaN(Number(str.charAt(i-1)))) {
+            document.getElementById("birthdate").value = str.substr(0, i-1)
+        }
+    
+    });
+    
+    document.addEventListener('keydown', function(event) { //pega o evento de precionar uma tecla 
+    
+        if(event.keyCode != 46 && event.keyCode != 8){ //verifica se a tecla precionada nao e um backspace e delete
+            var i = document.getElementById("birthdate").value.length; //aqui pega o tamanho do input
+            if (i === 2 || i === 5) document.getElementById("birthdate").value = document.getElementById("birthdate").value + "/";
+                //aqui faz a divisoes colocando um ponto no terceiro e sexto indice 
+        }
         
-        var mask = IMask(element, maskOptions);
-    </script>
-    -->
+    });
+</script>
 </body>
 </html>
