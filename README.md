@@ -31,7 +31,7 @@ class Usuario extends Model {
 
 }
 ```
-## Abaixo Inclusões Realizadas no MVC, das aulas do CURSO DE PHP 7+ do Bonieky
+## Abaixo Inclusões Realizadas na estrutura MVC, àpartir das aulas do CURSO DE PHP 7+ do Bonieky
 
 ## Inclusões por Níkolas // ANTES DE UPAR NO GIT
 
