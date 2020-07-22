@@ -116,3 +116,10 @@ class Usuario extends Model {
 - Perfil (parte 4) - Contéudo Específico
 
 - Perfil (parte 5) - Contéudo Específico
+
+- Perfil (parte 6) - Feed
+
+- Perfil (parte 7) - Feed
+
+- Sair
+

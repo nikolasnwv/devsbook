@@ -6,6 +6,22 @@ use \src\models\UserRelation;
 use \src\handlers\PostHandler;
 
 class UserHandler {
+
+    public function addUser($name, $email, $password, $birthdate){
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $token = md5(time().rand(0,9999).time());
+        
+        User::insert([
+            'name' => $name,
+            'email' => $email,
+            'password' => $hash,
+            'birthdate' => $birthdate,
+            'token' => $token
+        ])->execute();
+
+        return $token;
+    }
+
     public static function checkLogin() {
         if(!empty($_SESSION['token'])) {
             $token = $_SESSION['token'];
@@ -104,20 +120,5 @@ class UserHandler {
         }
 
         return false;
-    }
-
-    public function addUser($name, $email, $password, $birthdate){
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-        $token = md5(time().rand(0,9999).time());
-        
-        User::insert([
-            'name' => $name,
-            'email' => $email,
-            'password' => $hash,
-            'birthdate' => $birthdate,
-            'token' => $token
-        ])->execute();
-
-        return $token;
     }
 }

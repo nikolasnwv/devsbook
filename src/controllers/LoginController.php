@@ -79,4 +79,9 @@ class LoginController extends Controller {
         }
     }
 
+    public function signoutAction(){
+        $_SESSION['token'] = '';
+        $this->redirect('/');
+    }
+
 }
