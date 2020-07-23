@@ -123,3 +123,6 @@ class Usuario extends Model {
 
 - Sair
 
+- Perfil (parte 8) - Follow
+
+- Perfil (parte 9) - Follow

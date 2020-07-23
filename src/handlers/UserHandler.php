@@ -7,21 +7,6 @@ use \src\handlers\PostHandler;
 
 class UserHandler {
 
-    public function addUser($name, $email, $password, $birthdate){
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-        $token = md5(time().rand(0,9999).time());
-        
-        User::insert([
-            'name' => $name,
-            'email' => $email,
-            'password' => $hash,
-            'birthdate' => $birthdate,
-            'token' => $token
-        ])->execute();
-
-        return $token;
-    }
-
     public static function checkLogin() {
         if(!empty($_SESSION['token'])) {
             $token = $_SESSION['token'];
@@ -69,6 +54,21 @@ class UserHandler {
         return $user ? true : false;
     }
 
+    public function addUser($name, $email, $password, $birthdate){
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $token = md5(time().rand(0,9999).time());
+        
+        User::insert([
+            'name' => $name,
+            'email' => $email,
+            'password' => $hash,
+            'birthdate' => $birthdate,
+            'token' => $token
+        ])->execute();
+
+        return $token;
+    }
+
     public function getUser($id, $full = false) {
         $data = User::select()->where('id', $id)->one();
         
@@ -96,7 +96,7 @@ class UserHandler {
                     $newUser->name = $userData['name'];
                     $newUser->avatar = $userData['avatar'];
                     
-                    $user->$followers[] = $newUser;
+                    $user->followers[] = $newUser;
                 }
 
                 //following
@@ -108,7 +108,7 @@ class UserHandler {
                     $newUser->name = $userData['name'];
                     $newUser->avatar = $userData['avatar'];
                     
-                    $user->$following[] = $newUser;
+                    $user->following[] = $newUser;
                 }
 
                 //photos
@@ -121,4 +121,31 @@ class UserHandler {
 
         return false;
     }
+
+    public static function isFollowing($from, $to) {
+        $data = UserRelation::select()
+            ->where('user_from', $from)
+            ->where('user_to', $to)
+        ->one();
+
+        if($data) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function follow($from, $to) {
+        UserRelation::insert([
+            'user_from' => $from,
+            'user_to' => $to
+        ])->execute();
+    }
+
+    public static function unfollow($from, $to) {
+        UserRelation::delete()
+            ->where('user_from', $from)
+            ->where('user_to', $to)
+        ->execute();
+    }
+
 }
