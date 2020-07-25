@@ -130,12 +130,15 @@ header .head-side {
     border-top:1px solid #ccc;
     margin-bottom:5px;
 }
+/**/
 .menu-item {
-    display:flex;
     align-items: center;
-    height:32px;
+    height: auto;
     border:1px solid #edeef0;
+    display: flex;
+    padding: 5px;
 }
+/**/
 .menu-item:hover, .menu-item.active {
     background-color:#d1d9e0;
     border:1px solid #CCC;
@@ -475,12 +478,25 @@ header .head-side {
         display:none;
     }
 
-    .menu-item-badge {
-        display:none;
+    /**/
+    
+    .menu-item {
+        display: inline-block;
     }
 
+    .menu-item-icon {
+        width:16px;
+        margin: 0 auto;
+    }
+    
     .menu-item-text {
-        margin-right:5px;
+        margin: 5px auto 0 auto;
+    }
+
+    /**/
+
+    .menu-item-badge {
+        display:none;
     }
 
     .feed .side {
