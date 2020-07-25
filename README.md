@@ -126,3 +126,8 @@ class Usuario extends Model {
 - Perfil (parte 8) - Follow
 
 - Perfil (parte 9) - Follow
+
+25/07/2020
+- Amigos (1/2)
+
+- Amigos (2/2)
