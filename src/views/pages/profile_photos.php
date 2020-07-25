@@ -1,7 +1,7 @@
 <?=$render('header', ['loggedUser'=>$loggedUser]);?>
 
     <section class="container main">
-        <?=$render('sidebar', ['activeMenu'=>'friends']);?>
+        <?=$render('sidebar', ['activeMenu'=>'photos']);?>
         
         <section class="feed">      
             <?=$render('profile-header', ['user'=>$user, 'loggedUser'=>$loggedUser, 'isFollowing'=>$isFollowing]);?>        

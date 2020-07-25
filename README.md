@@ -152,3 +152,5 @@ class Usuario extends Model {
     - Resolvido erro no ajax, com comentario de um aluno, era só adicionar alguns ifs no script.js e no feed-editor-text-send.js
 
 - Partial do perfil
+
+- Busca

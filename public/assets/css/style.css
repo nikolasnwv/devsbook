@@ -425,13 +425,14 @@ header .head-side {
     padding:10px 20px;
     background-color:#4a76a8;
     border-radius:10px;
-    color:#FFF;
+    color:#FFF !important;
     font-size:15px;
     display: inline-block;
     text-decoration: none;
     cursor:pointer;
     box-shadow:0px 0px 3px #999;
 }
+
 .button:hover {
     background-color:#477dbb;
 }
