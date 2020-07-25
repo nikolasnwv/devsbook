@@ -134,4 +134,6 @@ class Usuario extends Model {
 
 - Fotos
 
-    - Resolvido erro no ajaxa, com comentario de um aluno
+    - Resolvido erro no ajax, com comentario de um aluno, era só adicionar alguns ifs no script.js e no feed-editor-text-send.js
+
+- Partial do perfil
