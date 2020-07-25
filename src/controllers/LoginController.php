@@ -16,7 +16,7 @@ class LoginController extends Controller {
     }
 
     public function signupAction() {
-        $name = filter_input(INPUT_POST, 'name');
+        $name = trim(strip_tags(filter_input(INPUT_POST, 'name')));
         $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
         $password = filter_input(INPUT_POST, 'password');
         $birthdate = filter_input(INPUT_POST, 'birthdate');

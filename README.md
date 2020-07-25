@@ -73,6 +73,21 @@ class Usuario extends Model {
     });
     </script>
     ```
+
+    Eu também fiz um teste na hospedagem e vi que o cadastro de nomes Brasileiros com acentos e pontuações, correm riscos de ir para o banco de dados em formatos bugados com essas letras e acenteuações
+
+    ```PHP
+
+        //alterei deste
+    
+        $name = filter_input(INPUT_POST, 'name');
+
+        // para este
+
+        $name = trim(strip_tags(filter_input(INPUT_POST, 'name')));
+        
+
+    ```
     
 ## Inclusões por Níkolas // DEPOIS DE UPAR NO GIT
 
