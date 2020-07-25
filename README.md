@@ -131,3 +131,7 @@ class Usuario extends Model {
 - Amigos (1/2)
 
 - Amigos (2/2)
+
+- Fotos
+
+    - Resolvido erro no ajaxa, com comentario de um aluno

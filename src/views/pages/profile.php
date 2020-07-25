@@ -109,10 +109,15 @@
                                 <span>(<?=count($user->photos);?>)</span>
                             </div>
                             <div class="box-header-buttons">
-                                <a href="">ver todos</a>
+                                <a href="<?=$base?>/profile/<?=$user->id;?>/photos">ver todas</a>
                             </div>
                         </div>
                         <div class="box-body row m-20">
+                            <!-- Esta alteração foi feita no profile_photos, porém eu resolvi aplicar ela aqui também. -->
+                                <?php if(count($user->photos) === 0): ?>
+                                    Este usuário não possui fotos.
+                                <?php endif;?>
+
                             <?php for($q=0;$q<4;$q++): ?>
                                 <?php if(isset($user->photos[$q])): ?>
                                     <div class="user-photo-item">
