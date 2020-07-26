@@ -154,3 +154,13 @@ class Usuario extends Model {
 - Partial do perfil
 
 - Busca
+
+- Configuralções
+
+    - Criada as configurações para edições de dados do usuário  
+        - Adicionada routes
+        - Alterado link na SideBar
+        
+        - Criado o SettingsController
+        - Criada a página settings
+        - Modificado o user handler, na parte do checklogin, para pegar mais dados do user

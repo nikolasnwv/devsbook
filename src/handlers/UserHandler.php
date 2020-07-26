@@ -10,8 +10,8 @@ class UserHandler {
     public static function checkLogin() {
         if(!empty($_SESSION['token'])) {
             $token = $_SESSION['token'];
-
             $data = User::select()->where('token', $token)->one(); // one pode ser ->execute
+
             if(count($data) > 1) { //originalmente era 0 - porém da bug quando loga em janela anonima, com 1 funciona corretamente
                 
                 $loggedUser = new User();
@@ -19,6 +19,12 @@ class UserHandler {
                 $loggedUser->email = $data['email'];
                 $loggedUser->name = $data['name'];
                 $loggedUser->avatar = $data['avatar'];
+
+                /**/ 
+                $loggedUser->birthdate = $data['birthdate'];
+                $loggedUser->city = $data['city'];
+                $loggedUser->work = $data['work'];
+                /**/
 
                 return $loggedUser;
             }
@@ -168,5 +174,71 @@ class UserHandler {
         }
         return $users;
     }
+
+    /**/
+
+    public function updateName($id, $name) {
+        $user = User::select()->where('id', $id)->one();
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        
+        if($name){
+            User::update()
+                ->set('name', $name)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    public function updateEmail($id, $email) {
+        $user = User::select()->where('id', $id)->one();
+        
+        if($email){
+            User::update()
+                ->set('email', $email)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    public function updateBirthdate($id, $birthdate) {
+        $user = User::select()->where('id', $id)->one();
+        
+        if($birthdate){
+            User::update()
+                ->set('birthdate', $birthdate)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    public function updateCity($id, $city) {
+        $user = User::select()->where('id', $id)->one();
+        
+        if($city){
+            User::update()
+                ->set('city', $city)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    public function updateWork($id, $work) {
+        $user = User::select()->where('id', $id)->one();
+        
+        if($work){
+            User::update()
+                ->set('work', $work)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    public function updatePassword($id, $password) {
+        $user = User::select()->where('id', $id)->one();
+        
+        if($hash){
+            User::update()
+                ->set('password', $hash)
+                ->where('id', $id)
+            ->execute();
+        }
+    }
+    
+    /**/
     
 }

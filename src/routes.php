@@ -13,7 +13,6 @@ $router->post('/register', 'LoginController@signupAction');
 
 $router->post('/post/new', 'PostController@new');
 
-
 $router->get('/profile/{id}/photos', 'ProfileController@photos');
 $router->get('/profile/{id}/friends', 'ProfileController@friends');
 $router->get('/profile/{id}/follow', 'ProfileController@follow');
@@ -26,3 +25,8 @@ $router->get('/photos', 'ProfileController@photos');
 $router->get('/search', 'SearchController@index');
 
 $router->get('/exit', 'LoginController@signoutAction');
+
+/* configurações add 25 07 2020 - 20:00 */
+
+$router->get('/settings','SettingsController@settings');
+$router->post('/settings','SettingsController@settingsAction');
