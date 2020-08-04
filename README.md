@@ -74,7 +74,7 @@ class Usuario extends Model {
     </script>
     ```
 
-    Eu também fiz um teste na hospedagem e vi que o cadastro de nomes Brasileiros com acentos e pontuações, correm riscos de ir para o banco de dados em formatos bugados com essas letras e acenteuações
+    Eu também fiz um teste na hospedagem e vi que o cadastro de nomes Brasileiros com acentos e pontuações, correm riscos de ir para o banco de dados em formatos bugados com essas letras e acentuações
 
     ```PHP
 
@@ -155,12 +155,11 @@ class Usuario extends Model {
 
 - Busca
 
-- Configuralções
+- Configurações
 
     - Criada as configurações para edições de dados do usuário  
         - Adicionada routes
         - Alterado link na SideBar
-        
         - Criado o SettingsController
         - Criada a página settings
-        - Modificado o user handler, na parte do checklogin, para pegar mais dados do user
+        - Modificado o user handler, na parte do checklogin, para pegar mais dados do user, e adicionado o update user nas varias partes da pagina settings para as infos irem corretas
