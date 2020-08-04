@@ -179,7 +179,6 @@ class UserHandler {
 
     public function updateName($id, $name) {
         $user = User::select()->where('id', $id)->one();
-        $hash = password_hash($password, PASSWORD_DEFAULT);
         
         if($name){
             User::update()
