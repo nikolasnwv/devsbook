@@ -230,6 +230,7 @@ class UserHandler {
     }
     public function updatePassword($id, $password) {
         $user = User::select()->where('id', $id)->one();
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         
         if($hash){
             User::update()

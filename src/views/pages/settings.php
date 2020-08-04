@@ -51,7 +51,7 @@
                     <br/>
                     <label>Confirmar Nova Senha:</label>
                     <br/>
-                    <input type="password" name="newPassword" id="newPassword"/>
+                    <input type="password" name="password1" id="password1"/>
                     <br/>
                     <input type="submit" class="button form-confir-input-submit" value="Salvar"/>
                 </div>
